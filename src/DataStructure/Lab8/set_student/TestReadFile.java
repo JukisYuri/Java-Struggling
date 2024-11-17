@@ -16,5 +16,12 @@ public class TestReadFile {
 			String word = input.next();
 			System.out.println(word);
 		}
+		MyWordCount myWordCount = new MyWordCount();
+		System.out.println("-----------------------------");
+		System.out.println("Unique Words: " + myWordCount.getUniqueWords());
+		System.out.println("Distinct Words: " + myWordCount.getDistinctWords());
+		System.out.println("Words Count: " + myWordCount.printWordCounts());
+		System.out.println("Words Count By Occurence: " + myWordCount.exportWordCountsByOccurence());
+		System.out.println("After Remove Filter Words: " + myWordCount.filterWords("D"));
 	}
 }

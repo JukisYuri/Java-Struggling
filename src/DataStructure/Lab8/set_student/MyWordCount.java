@@ -118,12 +118,4 @@ public class MyWordCount {
 		}
 		return result;
 	}
-	public static void main(String[] args){
-		MyWordCount myWordCount = new MyWordCount();
-		System.out.println(myWordCount.getUniqueWords());
-		System.out.println(myWordCount.getDistinctWords());
-		System.out.println(myWordCount.printWordCounts());
-		System.out.println(myWordCount.exportWordCountsByOccurence());
-		System.out.println(myWordCount.filterWords("D"));
-	}
 }
