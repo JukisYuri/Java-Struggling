@@ -1,7 +1,5 @@
 package JavaBasic.EX19;
 
-import Excercise.DMYNum;
-
 import java.util.Arrays;
 
 public class Student {
