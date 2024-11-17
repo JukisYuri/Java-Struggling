@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="09d32231-dfcb-45f9-86c5-f13c2723a16e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BTNhom10Percent/Management.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BTNhom10Percent/ResultProgress.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BTNhom10Percent/TabSwitching.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BTNhom10PercentOOP/GiaoDich.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BTNhom10PercentOOP/LenhBan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BTNhom10PercentOOP/LenhChuyenNhuong.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BTNhom10PercentOOP/LenhMua.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BTNhom10PercentOOP/MainTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BTNhom10PercentOOP/TaiKhoanChungKhoan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CK2018/Swing/InformationFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CK2018/Swing/MainFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CK2018/Swing/PaintFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CK2018/checkString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CK2019/OOP/Comparable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CK2019/OOP/MainTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CK2019/OOP/NhanVien.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CK2019/Swing/MainFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/De1BTN/MainFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/De1BTN/TableProgress.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/De1BTNOOP/KhachHang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/De1BTNOOP/QuanLyBanHang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/De1BTNOOP/SanPham.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/De1BTNOOP/TestMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/De1BTNOOP/ThoiTrang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/De1BTNOOP/ThucPham.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/De2BTN/SaleProductFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/De2BTN/TableProgress.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/De2BTNOOP/KhachHang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/De2BTNOOP/QuanLyBanHang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/De2BTNOOP/SanPham.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/De2BTNOOP/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/De2BTNOOP/ThoiTrang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/De2BTNOOP/ThucPham.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DrawingSwing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dunno.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EX25CoppyToLearn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MusicSwing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YourselfLearning.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrayFor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tagyouareit.wav" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Lab2_Task1/Task1_1.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2j5or70OLtpl3wm9Qj2HDgdzrWy" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Dunno.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MyArray.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Solution.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Task1_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Task1_2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Task1_3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Task2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.loops.executor&quot;: &quot;Run&quot;,
+    &quot;Application.outputFormatting.executor&quot;: &quot;Run&quot;,
+    &quot;Application.testFaculty.executor&quot;: &quot;Run&quot;,
+    &quot;Application.testProduct.executor&quot;: &quot;Run&quot;,
+    &quot;Application.whyamIhere.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/IdeaProjects/Excercise&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="YourselfLearning" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="YourselfLearning" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="09d32231-dfcb-45f9-86c5-f13c2723a16e" name="Changes" comment="" />
+      <created>1720686494944</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720686494944</updated>
+      <workItem from="1720686495946" duration="19000" />
+      <workItem from="1725108880383" duration="4680000" />
+      <workItem from="1725115712481" duration="671000" />
+      <workItem from="1725277459431" duration="322000" />
+      <workItem from="1725279253551" duration="894000" />
+      <workItem from="1725798616217" duration="2000" />
+      <workItem from="1725988366358" duration="1460000" />
+      <workItem from="1726069038671" duration="3028000" />
+      <workItem from="1726072205542" duration="2858000" />
+      <workItem from="1726111950535" duration="162000" />
+      <workItem from="1726152307275" duration="1538000" />
+      <workItem from="1726156988615" duration="4519000" />
+      <workItem from="1726161625845" duration="555000" />
+      <workItem from="1726225336645" duration="5226000" />
+      <workItem from="1726382125182" duration="1316000" />
+      <workItem from="1726385593422" duration="5159000" />
+      <workItem from="1726407046549" duration="1637000" />
+      <workItem from="1726507202139" duration="6000" />
+      <workItem from="1726665856657" duration="518000" />
+      <workItem from="1726752779703" duration="1964000" />
+      <workItem from="1726922472462" duration="501000" />
+      <workItem from="1726986996959" duration="29000" />
+      <workItem from="1727103671566" duration="55000" />
+      <workItem from="1727190118403" duration="2934000" />
+      <workItem from="1727196135742" duration="182000" />
+      <workItem from="1727261942647" duration="647000" />
+      <workItem from="1727528674525" duration="10327000" />
+      <workItem from="1727539628893" duration="3000" />
+      <workItem from="1727607128244" duration="27000" />
+      <workItem from="1727607368494" duration="13199000" />
+      <workItem from="1727700278285" duration="8509000" />
+      <workItem from="1727781058875" duration="632000" />
+      <workItem from="1727787405579" duration="9418000" />
+      <workItem from="1727797007596" duration="31000" />
+      <workItem from="1727850419148" duration="7216000" />
+      <workItem from="1727882991064" duration="109000" />
+      <workItem from="1727955395901" duration="1422000" />
+      <workItem from="1727963490607" duration="8364000" />
+      <workItem from="1727976396625" duration="404000" />
+      <workItem from="1728019097072" duration="7177000" />
+      <workItem from="1728042151652" duration="342000" />
+      <workItem from="1728042855396" duration="129000" />
+      <workItem from="1728050190520" duration="72000" />
+      <workItem from="1728050920973" duration="18000" />
+      <workItem from="1728105630754" duration="7436000" />
+      <workItem from="1728126032838" duration="17000" />
+      <workItem from="1728200059729" duration="227000" />
+      <workItem from="1728200539654" duration="1060000" />
+      <workItem from="1728201754449" duration="3000" />
+      <workItem from="1728204730267" duration="2343000" />
+      <workItem from="1728213905866" duration="4801000" />
+      <workItem from="1728223105378" duration="901000" />
+      <workItem from="1728226015499" duration="87000" />
+      <workItem from="1728286090406" duration="314000" />
+      <workItem from="1728308305122" duration="2787000" />
+      <workItem from="1728393856366" duration="2459000" />
+      <workItem from="1728459681541" duration="833000" />
+      <workItem from="1728483542326" duration="1114000" />
+      <workItem from="1728568090782" duration="9176000" />
+      <workItem from="1728585191714" duration="11000" />
+      <workItem from="1728627360888" duration="39000" />
+      <workItem from="1728647016207" duration="361000" />
+      <workItem from="1728647723792" duration="1565000" />
+      <workItem from="1728649836741" duration="956000" />
+      <workItem from="1728650820037" duration="19000" />
+      <workItem from="1728711245448" duration="6230000" />
+      <workItem from="1728819639196" duration="48000" />
+      <workItem from="1728819696736" duration="145000" />
+      <workItem from="1728833444499" duration="26000" />
+      <workItem from="1728997582921" duration="5417000" />
+      <workItem from="1729003239196" duration="5893000" />
+      <workItem from="1729009803107" duration="1866000" />
+      <workItem from="1729067163273" duration="2650000" />
+      <workItem from="1729095482829" duration="888000" />
+      <workItem from="1729169057193" duration="41000" />
+      <workItem from="1729171704533" duration="8409000" />
+      <workItem from="1729241063421" duration="3014000" />
+      <workItem from="1729246981477" duration="715000" />
+      <workItem from="1729248447567" duration="9000" />
+      <workItem from="1729314978675" duration="299000" />
+      <workItem from="1729315379167" duration="18000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="9" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
