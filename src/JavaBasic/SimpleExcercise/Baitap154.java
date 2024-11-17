@@ -1,4 +1,4 @@
-package SimpleExcercise;
+package JavaBasic.SimpleExcercise;
 
 public class Baitap154 {
     public static void countNumberArray(int[] arr) {

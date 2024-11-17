@@ -1,4 +1,4 @@
-package SimpleExcercise;
+package JavaBasic.SimpleExcercise;
 
 public class Baitap169 {
     public static void printMatrix(int[][] arr){

@@ -1,4 +1,4 @@
-package SimpleExcercise;
+package JavaBasic.SimpleExcercise;
 
 public class Array2DSuck {
     public static void printMatrix(int[][] matrix) {

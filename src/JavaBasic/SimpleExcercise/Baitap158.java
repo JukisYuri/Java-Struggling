@@ -1,4 +1,4 @@
-package SimpleExcercise;
+package JavaBasic.SimpleExcercise;
 
 public class Baitap158 {
     public static boolean checkArray(int[] arr){

@@ -1,4 +1,4 @@
-package SimpleExcercise;
+package JavaBasic.SimpleExcercise;
 
 public class Baitap155 {
     public static void moveMatrix(int[] arr){

@@ -1,4 +1,4 @@
-package Assigment1;
+package JavaBasic.Assigment1;
 import java.util.Scanner;
 
 public class TriangleCheck {

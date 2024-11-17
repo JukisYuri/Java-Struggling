@@ -1,4 +1,4 @@
-package EX19;
+package JavaBasic.EX19;
 
 import Excercise.DMYNum;
 

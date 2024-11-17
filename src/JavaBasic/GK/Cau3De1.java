@@ -1,4 +1,4 @@
-package GK;
+package JavaBasic.GK;
 
 public class Cau3De1 {
     public static void printMatrix(int[][] array){

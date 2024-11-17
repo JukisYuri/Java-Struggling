@@ -1,4 +1,4 @@
-package BTNhom;
+package JavaBasic.BTNhom;
 
 import javax.swing.*;
 import java.awt.*;

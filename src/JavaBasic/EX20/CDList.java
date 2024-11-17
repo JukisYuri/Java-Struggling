@@ -1,4 +1,4 @@
-package EX20;
+package JavaBasic.EX20;
 
 public class CDList {
     private CD[] cds;

@@ -1,4 +1,4 @@
-package Excercise;
+package JavaBasic.Excercise;
 
 public class MatrixNum {
     public static void printMatrix(int[][] matrix){

@@ -1,4 +1,4 @@
-package FinalBoss.Boss1;
+package JavaBasic.FinalBoss.Boss1;
 
 public class AuthorBook {
     private String bookName, author, yearRelease, quantityRemain;

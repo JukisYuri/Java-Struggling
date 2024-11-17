@@ -1,4 +1,4 @@
-package EX20;
+package JavaBasic.EX20;
 
 public class Main {
     public static void main(String[] args) {

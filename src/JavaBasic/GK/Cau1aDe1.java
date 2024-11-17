@@ -1,4 +1,4 @@
-package GK;
+package JavaBasic.GK;
 
 import java.util.Scanner;
 

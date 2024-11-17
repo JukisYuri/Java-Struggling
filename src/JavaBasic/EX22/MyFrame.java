@@ -1,4 +1,4 @@
-package EX22;
+package JavaBasic.EX22;
 
 import javax.swing.*;
 import java.awt.*;

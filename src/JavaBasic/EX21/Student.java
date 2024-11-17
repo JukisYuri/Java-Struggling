@@ -1,4 +1,4 @@
-package EX21;
+package JavaBasic.EX21;
 
 public class Student extends Human {
     private float diem1, diem2, diem3;

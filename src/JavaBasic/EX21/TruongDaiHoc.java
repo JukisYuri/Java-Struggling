@@ -1,4 +1,4 @@
-package EX21;
+package JavaBasic.EX21;
 
 import java.util.ArrayList;
 

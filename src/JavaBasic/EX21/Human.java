@@ -1,4 +1,4 @@
-package EX21;
+package JavaBasic.EX21;
 
 public class Human {
     protected String ten, namSinh;

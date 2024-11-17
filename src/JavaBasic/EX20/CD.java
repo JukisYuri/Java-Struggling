@@ -1,4 +1,4 @@
-package EX20;
+package JavaBasic.EX20;
 
 public class CD {
         private int id, songCD;

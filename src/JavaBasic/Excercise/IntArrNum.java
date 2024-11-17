@@ -1,4 +1,4 @@
-package Excercise;
+package JavaBasic.Excercise;
 
 public class IntArrNum {
 

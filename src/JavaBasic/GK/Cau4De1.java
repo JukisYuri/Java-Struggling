@@ -1,4 +1,4 @@
-package GK;
+package JavaBasic.GK;
 
 public class Cau4De1 {
     public static String encodeString(String s) {

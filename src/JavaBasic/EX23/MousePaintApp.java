@@ -1,4 +1,4 @@
-package EX23;
+package JavaBasic.EX23;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;

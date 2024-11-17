@@ -1,4 +1,4 @@
-package SimpleExcercise;
+package JavaBasic.SimpleExcercise;
 
 public class Baitap159 {
     public static boolean checkSymmetry(int[] arr) {

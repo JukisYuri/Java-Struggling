@@ -1,4 +1,4 @@
-package Excercise;
+package JavaBasic.Excercise;
 
 public class RanArrNum { // Bai 17
     public static void biggestArr(int[] arr){

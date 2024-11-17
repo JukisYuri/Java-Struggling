@@ -1,4 +1,4 @@
-package Excercise;
+package JavaBasic.Excercise;
 
 public class ArrayNum {
     public static int[] arrayPlus(int[] arr1, int[] arr2){

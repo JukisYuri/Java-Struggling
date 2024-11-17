@@ -1,4 +1,4 @@
-package GK;
+package JavaBasic.GK;
 
 public class Cau2De1 {
     public static boolean daySoDanDau(int[] arr){

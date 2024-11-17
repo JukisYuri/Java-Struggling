@@ -1,4 +1,4 @@
-package FinalBoss.Boss1;
+package JavaBasic.FinalBoss.Boss1;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package Assigment3;
+package JavaBasic.Assigment3;
 
 import java.util.Scanner;
 

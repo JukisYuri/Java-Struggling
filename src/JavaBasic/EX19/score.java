@@ -1,4 +1,4 @@
-package EX19;
+package JavaBasic.EX19;
 
 public class score {
     private int idSubject;

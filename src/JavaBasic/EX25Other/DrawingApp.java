@@ -1,4 +1,4 @@
-package EX25Other;
+package JavaBasic.EX25Other;
 
 import javax.swing.*;
 import java.awt.*;
