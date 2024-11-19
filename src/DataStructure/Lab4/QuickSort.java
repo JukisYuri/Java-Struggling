@@ -61,8 +61,8 @@ public class QuickSort {
         return random.nextInt(array.length);
     }
     public static void main(String[] args){
-    int[] arr = {9,0,2,4,1,3,6,5,7,8};
-    quickSort(arr);
-    System.out.println(Arrays.toString(arr));
+        int[] arr = {9,0,2,4,1,3,6,5,7,8};
+        quickSort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 }
