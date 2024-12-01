@@ -1,5 +1,9 @@
 package DataStructure.Lab9.lab9_map;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 
 public class TextAnalyzer {
@@ -9,9 +13,28 @@ public class TextAnalyzer {
 	// load words in the text file given by fileName and store into map by using add
 	// method in Task 2.1.
 	// Using BufferedReader referred in file TextFileUtils.java
-	public void load(String fileName) {
-		// TODO
+	public void load(String fileName){
+		try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+			String readLine;
+			int totalNumberOfWordsRead = 0;
+			while ((readLine = br.readLine()) != null) {
+				String[] words = readLine.split("\\s+");
+				for (int i = 0; i < words.length; i++) {
+					int currentPosition = totalNumberOfWordsRead + i + 1;
+					if(i == words.length - 1){
+						add(words[i], -currentPosition);
+					} else {
+						add(words[i], currentPosition);
+					}
+				}
+				totalNumberOfWordsRead += words.length;
+			}
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+		System.out.println(map);
 	}
+
 	// In the following method, if the word is not in the map, then adding that word
 	// to the map containing the position of the word in the file. If the word is
 	// already in the map, then its word position is added to the list of word
@@ -28,27 +51,53 @@ public class TextAnalyzer {
 	// This method should display the words of the text file along with the
 	// positions of each word, one word per line, in alphabetical order
 	public void displayWords() {
-		Map treeMap = new TreeMap(new Comparator<String>() {
-			@Override
-			public int compare(String o1, String o2) {
-				return o1.compareToIgnoreCase(o2);
-			}
-		});
-		treeMap.putAll(map);
+		Set<String> sortedWords = new TreeSet<>(map.keySet());
+		for (String word : sortedWords) {
+			ArrayList<Integer> values = map.get(word);
+				System.out.print(word + ": ");
+				for (Integer position : values) {
+					System.out.print(position + " ");
+				}
+				System.out.println();
+		}
+		System.out.println("------------");
 	}
 
 	// This method will display the content of the text file stored in the map
 	public void displayText() {
-		// TODO
+		for(String word : map.keySet()){
+			ArrayList<Integer> values = map.get(word);
+			System.out.print(word + ": ");
+			for (Integer position : values) {
+				System.out.print(position + " ");
+			}
+			System.out.println();
+		}
+		System.out.println("------------");
 	}
 
 	// This method will return the word that occurs most frequently in the text file
 	public String mostFrequentWord() {
-		// TODO
-		return null;
+		String result = "";
+		int maxCount = 0;
+		for(String word : map.keySet()){
+			ArrayList<Integer> values = map.get(word);
+			int count = values.size();
+
+			if(count > maxCount){
+				maxCount = count;
+				result = word;
+			}
+		}
+		return result;
 	}
-	public static void main(String[] args) {
+
+	public static void main(String[] args) throws IOException {
 		TextAnalyzer textAnalyzer = new TextAnalyzer();
+		textAnalyzer.load("src/DataStructure/Lab9/data/short.txt");
+		System.out.println("------------");
 		textAnalyzer.displayWords();
+		textAnalyzer.displayText();
+		System.out.println(textAnalyzer.mostFrequentWord());
 	}
 }
