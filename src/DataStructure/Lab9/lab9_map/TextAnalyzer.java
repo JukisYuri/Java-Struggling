@@ -51,7 +51,8 @@ public class TextAnalyzer {
 	// This method should display the words of the text file along with the
 	// positions of each word, one word per line, in alphabetical order
 	public void displayWords() {
-		Set<String> sortedWords = new TreeSet<>(map.keySet());
+		Set<String> sortedWords = new TreeSet<>(String.CASE_INSENSITIVE_ORDER); // Chuyển tất cả các từ trong map thành chữ thường và sắp xếp theo thứ tự alphabet
+		sortedWords.addAll(map.keySet());
 		for (String word : sortedWords) {
 			ArrayList<Integer> values = map.get(word);
 				System.out.print(word + ": ");
@@ -82,7 +83,7 @@ public class TextAnalyzer {
 		int maxCount = 0;
 		for(String word : map.keySet()){
 			ArrayList<Integer> values = map.get(word);
-			int count = values.size();
+			int count = values.size(); // Trả về tất số lượng entries
 
 			if(count > maxCount){
 				maxCount = count;
