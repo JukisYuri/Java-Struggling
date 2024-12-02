@@ -81,17 +81,16 @@ public class TextAnalyzer {
 	public String mostFrequentWord() {
 		String result = "";
 		int maxCount = 0;
-		for(String word : map.keySet()){
-			ArrayList<Integer> values = map.get(word);
-			int count = values.size(); // Trả về tất số lượng entries
-
-			if(count > maxCount){
+		for (Map.Entry<String, ArrayList<Integer>> entry : map.entrySet()) {
+			int count = entry.getValue().size();
+			if (count > maxCount) {
 				maxCount = count;
-				result = word;
+				result = entry.getKey();
 			}
 		}
 		return result;
 	}
+
 
 	public static void main(String[] args) throws IOException {
 		TextAnalyzer textAnalyzer = new TextAnalyzer();
@@ -99,6 +98,6 @@ public class TextAnalyzer {
 		System.out.println("------------");
 		textAnalyzer.displayWords();
 		textAnalyzer.displayText();
-		System.out.println(textAnalyzer.mostFrequentWord());
+		System.out.println("Most Frequent Word: " + textAnalyzer.mostFrequentWord());
 	}
 }
