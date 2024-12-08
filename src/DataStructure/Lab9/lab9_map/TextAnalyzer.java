@@ -1,7 +1,6 @@
 package DataStructure.Lab9.lab9_map;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
@@ -54,7 +53,7 @@ public class TextAnalyzer {
 		Set<String> sortedWords = new TreeSet<>(String.CASE_INSENSITIVE_ORDER); // Chuyển tất cả các từ trong map thành chữ thường và sắp xếp theo thứ tự alphabet
 		sortedWords.addAll(map.keySet());
 		for (String word : sortedWords) {
-			ArrayList<Integer> values = map.get(word);
+			ArrayList<Integer> values = map.get(word); // Lấy value của key
 				System.out.print(word + ": ");
 				for (Integer position : values) {
 					System.out.print(position + " ");
@@ -82,7 +81,7 @@ public class TextAnalyzer {
 		String result = "";
 		int maxCount = 0;
 		for (Map.Entry<String, ArrayList<Integer>> entry : map.entrySet()) {
-			int count = entry.getValue().size();
+			int count = entry.getValue().size(); // getValue() trả về ArrayList<Integer> và size() để đếm số phần tử trong danh sách
 			if (count > maxCount) {
 				maxCount = count;
 				result = entry.getKey();
@@ -90,7 +89,6 @@ public class TextAnalyzer {
 		}
 		return result;
 	}
-
 
 	public static void main(String[] args) throws IOException {
 		TextAnalyzer textAnalyzer = new TextAnalyzer();
