@@ -80,7 +80,6 @@ public class OrderManager {
         if (orders.isEmpty()) {
             throw new RuntimeException("No orders found");
         } else {
-
             TreeSet<Order> listTreeSet = new TreeSet<>(new Comparator<Order>() {
                 @Override
                 public int compare(Order o1, Order o2) {

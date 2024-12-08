@@ -29,11 +29,12 @@ public class testMain {
         listOrder.add(order1);
         listOrder.add(order2);
         OrderManager orderManager = new OrderManager(listOrder);
+
         System.out.println(orderManager.maxProduct());
-        //System.out.println(orderManager.maxProductWithJava8());
+        System.out.println(orderManager.maxProductWithJava8());
         System.out.println(orderManager.productTypeStatistics());
-        //System.out.println(orderManager.productTypeStatisticsWithJava8());
+        System.out.println(orderManager.productTypeStatisticsWithJava8());
         System.out.println(orderManager.ordersByCost());
-        //System.out.println(orderManager.ordersByCostWithJava8());
+        System.out.println(orderManager.ordersByCostWithJava8());
     }
 }
