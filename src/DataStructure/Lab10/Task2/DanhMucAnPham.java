@@ -1,8 +1,7 @@
 package DataStructure.Lab10.Task2;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class DanhMucAnPham {
     private List<AnPham> danhSachAnPham;
@@ -66,6 +65,45 @@ public class DanhMucAnPham {
         return result;
     }
 
+    boolean anPhamCoChuaTapChiCoTenChoTruoc(){
+        for (AnPham anPham : danhSachAnPham){
+            if(anPham instanceof TapChi){
+                if(!anPham.getTieuDe().isBlank()){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    List<AnPham> danhSachTapChiXuatBan(int yearResult){
+        List<AnPham> danhSach = new ArrayList<>();
+        for (AnPham anPham : danhSachAnPham) {
+            if(anPham instanceof TapChi){
+                if(LocalDate.now().getYear() - anPham.getNamXuatBan() >= yearResult){
+                    danhSach.add(anPham);
+                }
+            }
+        }
+        return danhSach;
+    }
+
+    List<AnPham> sapXepAnPham(){
+        List<AnPham> danhSach = new ArrayList<>(danhSachAnPham);
+        Comparator<AnPham> comparator = Comparator.comparing(AnPham::getTieuDe).thenComparing(Comparator.comparing(AnPham::getNamXuatBan).reversed());
+        danhSach.sort(comparator);
+        return danhSach;
+    }
+
+    Map<Integer, Integer> thongKeSoLuongAnPham(){
+        Map<Integer, Integer> result = new TreeMap<>();
+        for(AnPham anPham : danhSachAnPham){
+            int namXuatBan = anPham.getNamXuatBan();
+            result.put(namXuatBan, result.getOrDefault(namXuatBan, 0) + 1);
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         List<ChuongSach> chuongSaches = new ArrayList<>();
         ChuongSach chuongSach1 = new ChuongSach("Khúc Ca Con Rối", 200);
@@ -78,7 +116,7 @@ public class DanhMucAnPham {
         chuongSaches2.add(chuongSach3);
         chuongSaches2.add(chuongSach4);
         SachKhamKhao sachKhamKhao = new SachKhamKhao("Câu chuyện cuối cùng của tiểu thư kỳ bí", "Dạ Miêu Quân", 300, 2005, 100000, "Lightnovel", chuongSaches);
-        SachKhamKhao sachKhamKhao2 = new SachKhamKhao("Huyền Tích Ánh Dương", "Akaros", 250, 2005, 100000, "Lightnovel", chuongSaches2);
+        SachKhamKhao sachKhamKhao2 = new SachKhamKhao("Huyền Tích Ánh Dương", "Akaros", 250, 2007, 100000, "Lightnovel", chuongSaches2);
         TapChi tapChi = new TapChi("Thời Trang", "Unknown", 10, 2002, 5000, "Giày Dép");
         List<AnPham> danhSachAnPham = new ArrayList<>();
         danhSachAnPham.add(sachKhamKhao);
@@ -91,5 +129,9 @@ public class DanhMucAnPham {
         System.out.println("2 ấn phẩm có cùng loại và tác giả? " + GREEN + danhMucAnPham.check2AnPhamCungLoaiVaCungTacGia(sachKhamKhao) + RESET);
         System.out.println("Tổng số tiền tất cả ấn phẩm: " + GREEN + danhMucAnPham.tongTienAnPham() + RESET);
         System.out.println("Ấn phẩm với nhiều trang nhất: " + "\n" + GREEN + danhMucAnPham.anPhamCoNhieuTrangNhat() + RESET);
+        System.out.println("Ấn phẩm có chứa tạp chí và có tên cho trước: " + GREEN + danhMucAnPham.anPhamCoChuaTapChiCoTenChoTruoc() + RESET);
+        System.out.println("Danh sách tạp chí xuất bản từ 1 năm về trước: " + "\n" + GREEN + danhMucAnPham.danhSachTapChiXuatBan(1) + RESET);
+        System.out.println("Sắp xếp ẩn phẩm tăng dần theo tiêu đề và giảm dần theo năm xuất bản: " + "\n" + GREEN + danhMucAnPham.sapXepAnPham() + RESET);
+        System.out.println("Thống kê số lượng ấn phẩm theo năm xuất bản: " + GREEN + danhMucAnPham.thongKeSoLuongAnPham() + RESET);
     }
 }
