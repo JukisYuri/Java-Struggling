@@ -90,7 +90,8 @@ public class DanhMucAnPham {
 
     List<AnPham> sapXepAnPham(){
         List<AnPham> danhSach = new ArrayList<>(danhSachAnPham);
-        Comparator<AnPham> comparator = Comparator.comparing(AnPham::getTieuDe).thenComparing(Comparator.comparing(AnPham::getNamXuatBan).reversed());
+        Comparator<AnPham> comparator = Comparator.comparing(AnPham::getTieuDe)
+                                                .thenComparing(Comparator.comparing(AnPham::getNamXuatBan).reversed());
         danhSach.sort(comparator);
         return danhSach;
     }
