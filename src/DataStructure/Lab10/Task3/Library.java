@@ -1,6 +1,8 @@
 package DataStructure.Lab10.Task3;
 
+import javax.swing.text.html.Option;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Library {
     private String name;
@@ -23,6 +25,11 @@ public class Library {
         return result;
     }
 
+    Optional<Book> getOldestBookWithJava8(){ // Dùng Optional khi không chắc chắn phương thức trả về
+        return books.stream()
+                .min(Comparator.comparingInt(Book::getYear));
+    }
+
     Map<Integer, List<Book>> getBookByYears(){
         Map<Integer, List<Book>> result = new TreeMap<>();
         for (Book book : books){
@@ -35,6 +42,11 @@ public class Library {
         return result;
     }
 
+    Map<Integer, List<Book>> getBookByYearsWithJava8(){
+        return books.stream()
+                .collect(Collectors.groupingBy(Book::getYear));
+    }
+
     Set<Book> findBooks(String authorName, int year){
         Set<Book> result = new TreeSet<>(Comparator.comparing(Book::getTitle));
         for (Book book : books) {
@@ -45,6 +57,13 @@ public class Library {
             }
         }
         return result;
+    }
+
+    Set<Book> findBooksWithJava8(String authorName, int year){
+        return books.stream()
+                .filter(book -> book.getYear() == year
+                        && book.getAuthors().stream().anyMatch(author -> author.getName().equals(authorName)))
+                .collect(Collectors.toSet());
     }
 
     @Override
