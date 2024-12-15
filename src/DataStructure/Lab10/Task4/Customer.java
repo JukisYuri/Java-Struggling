@@ -1,18 +1,18 @@
 package DataStructure.Lab10.Task4;
 
 public class Customer {
-    private Long oid;
+    private Long cid;
     private String name;
     private int tier;
 
     public Customer(Long oid, String name, int tier) {
-        this.oid = oid;
+        this.cid = oid;
         this.name = name;
         this.tier = tier;
     }
 
-    public Long getOid() {
-        return oid;
+    public Long getCid() {
+        return cid;
     }
 
     public String getName() {
@@ -25,7 +25,7 @@ public class Customer {
     @Override
     public String toString() {
         return "Customer{" +
-                "oid=" + oid +
+                "oid=" + cid +
                 ", name='" + name + '\'' +
                 ", tier=" + tier +
                 '}';

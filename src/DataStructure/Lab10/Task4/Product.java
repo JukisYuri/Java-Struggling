@@ -54,4 +54,8 @@ public class Product {
                 ", price=" + price +
                 '}';
     }
+
+    boolean isCategory(String supposeCategory) {
+        return this.category.equals(supposeCategory);
+    }
 }

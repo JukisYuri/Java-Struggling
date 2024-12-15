@@ -7,11 +7,11 @@ import java.util.stream.Collectors;
 public class Order {
     private Long oid;
     private String status;
-    private Date orderDate;
+    private LocalDate orderDate;
     private Customer customer;
     private List<OrderItem> items;
 
-    public Order(Long oid, String status, Date orderDate, Customer customer, List<OrderItem> items) {
+    public Order(Long oid, String status, LocalDate orderDate, Customer customer, List<OrderItem> items) {
         this.oid = oid;
         this.status = status;
         this.orderDate = orderDate;
@@ -27,7 +27,7 @@ public class Order {
         return status;
     }
 
-    public Date getOrderDate() {
+    public LocalDate getOrderDate() {
         return orderDate;
     }
 
@@ -102,6 +102,6 @@ public class Order {
         List<OrderItem> listOrderItems = new ArrayList<>();
         listOrderItems.add(orderItem1);
         listOrderItems.add(orderItem2);
-        return new Order(34L, "okay" , new Date(), customer1, listOrderItems);
+        return new Order(34L, "okay" , LocalDate.now(), customer1, listOrderItems);
     }
 }
