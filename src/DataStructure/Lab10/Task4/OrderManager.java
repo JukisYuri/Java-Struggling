@@ -70,6 +70,16 @@ public class OrderManager {
                 .collect(Collectors.groupingBy(order -> order.getCustomer().getCid())); // Nhóm các order theo cid
     }
 
+    Map<Long, Double> getStatisticOrdersAndCost() {
+        return orders.stream()
+                .collect(Collectors.toMap(
+                        Order::getOid, // Key là Order ID
+                        order -> order.getItems().stream()
+                                .mapToDouble(item -> item.getP().getPrice() * item.getQuantity())
+                                .sum() // Tính tổng giá của các sản phẩm trong đơn hàng
+                ));
+    }
+
     @Override
     public String toString() {
         return "OrderManager{" +
