@@ -30,11 +30,14 @@ public class testMain {
         listOrder.add(order2);
         OrderManager orderManager = new OrderManager(listOrder);
 
-        System.out.println(orderManager.maxProduct());
-        System.out.println(orderManager.maxProductWithJava8());
-        System.out.println(orderManager.productTypeStatistics());
-        System.out.println(orderManager.productTypeStatisticsWithJava8());
-        System.out.println(orderManager.ordersByCost());
-        System.out.println(orderManager.ordersByCostWithJava8());
+        List<Object> outputAnPham = List.of(
+            orderManager.maxProduct(),
+            orderManager.maxProductWithJava8(),
+            orderManager.productTypeStatistics(),
+            orderManager.productTypeStatisticsWithJava8(),
+            orderManager.ordersByCost(),
+            orderManager.ordersByCostWithJava8()
+        );
+        outputAnPham.forEach(System.out::println);
     }
 }
