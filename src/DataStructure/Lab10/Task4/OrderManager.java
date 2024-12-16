@@ -51,12 +51,12 @@ public class OrderManager {
                 .sum();
     }
 
-    OptionalDouble getAverageCostInSupposeDate(LocalDate supposeDate) {
+    double getAverageCostInSupposeDate(LocalDate supposeDate) {
         return orders.stream()
                 .filter(order -> order.getOrderDate().getDayOfMonth() == supposeDate.getDayOfMonth() && order.getOrderDate().getMonth().equals(supposeDate.getMonth()) && order.getOrderDate().getYear() == supposeDate.getYear())
                 .flatMap(order -> order.getItems().stream())
                 .mapToDouble(item -> item.getP().getPrice())
-                .average();
+                .average().orElse(0);
     }
 
     Map<Long, Integer> getNumberOfProducts() {

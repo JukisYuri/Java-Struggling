@@ -1,6 +1,5 @@
 package DataStructure.Lab10.Task3;
 
-import javax.swing.text.html.Option;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -25,9 +24,9 @@ public class Library {
         return result;
     }
 
-    Optional<Book> getOldestBookWithJava8(){ // Dùng Optional khi không chắc chắn phương thức trả về
+    Book getOldestBookWithJava8(){ // Dùng Optional khi không chắc chắn phương thức trả về
         return books.stream()
-                .min(Comparator.comparingInt(Book::getYear));
+                .min(Comparator.comparingInt(Book::getYear)).orElse(null);
     }
 
     Map<Integer, List<Book>> getBookByYears(){

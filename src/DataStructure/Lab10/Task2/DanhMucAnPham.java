@@ -83,10 +83,10 @@ public class DanhMucAnPham {
         return result;
     }
 
-    Optional<AnPham> anPhamCoNhieuTrangNhatJava8(){
+    AnPham anPhamCoNhieuTrangNhatJava8(){
         return danhSachAnPham.stream()
                 .filter(anPham -> anPham instanceof SachKhamKhao)
-                .max(Comparator.comparing(AnPham::getSoTrang)); // dùng max thì dùng filter, vì anymatch trả ra boolean
+                .max(Comparator.comparing(AnPham::getSoTrang)).orElse(null); // dùng max thì dùng filter, vì anymatch trả ra boolean
     }
 
     boolean anPhamCoChuaTapChiCoTenChoTruoc(){
