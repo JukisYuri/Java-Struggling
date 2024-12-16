@@ -81,9 +81,15 @@ public class Library {
         authors.add(author);
         authors.add(author2);
         Library library = getLibrary(authors);
-        System.out.println("Trả về cuốn sách lâu đời nhất: " + library.getOldestBook());
-        System.out.println("Trả về map những cuốn sách theo năm: " + "\n" + library.getBookByYears());
-        System.out.println("Tìm sách theo tên và năm xuất bản: " + "\n" + library.findBooks("Honobonoru500", 2021));
+        List<Object> outputLibrary = List.of(
+            "Trả về cuốn sách lâu đời nhất: " + library.getOldestBook(),
+                                                library.getOldestBookWithJava8(),
+            "Trả về map những cuốn sách theo năm: " + "\n" + library.getBookByYears(),
+                                                             library.getBookByYearsWithJava8(),
+            "Tìm sách theo tên và năm xuất bản: " + "\n" + library.findBooks("Honobonoru500", 2021),
+                                                           library.findBooksWithJava8("Honobonoru500", 2021)
+        );
+        outputLibrary.forEach(System.out::println);
     }
 
     private static Library getLibrary(List<Author> authors) {
