@@ -30,7 +30,7 @@ public class testMain {
         listOrder.add(order2);
         OrderManager orderManager = new OrderManager(listOrder);
 
-        List<Object> outputAnPham = List.of(
+        List<Object> outputOrders = List.of(
             orderManager.maxProduct(),
             orderManager.maxProductWithJava8(),
             orderManager.productTypeStatistics(),
@@ -38,6 +38,6 @@ public class testMain {
             orderManager.ordersByCost(),
             orderManager.ordersByCostWithJava8()
         );
-        outputAnPham.forEach(System.out::println);
+        outputOrders.forEach(System.out::println);
     }
 }
