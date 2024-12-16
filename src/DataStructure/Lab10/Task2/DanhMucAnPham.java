@@ -2,6 +2,7 @@ package DataStructure.Lab10.Task2;
 
 import java.time.LocalDate;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class DanhMucAnPham {
     private List<AnPham> danhSachAnPham;
@@ -32,6 +33,11 @@ public class DanhMucAnPham {
         return false;
     }
 
+    boolean checkAnPhamVaThoiGianXuatBanJava8(int limitOfYear){
+        return danhSachAnPham.stream()
+                .anyMatch(anPham -> anPham instanceof TapChi && LocalDate.now().getYear() - anPham.getNamXuatBan() >= limitOfYear);
+    }
+
     boolean check2AnPhamCungLoaiVaCungTacGia(AnPham otherAnPham) {
         for (AnPham anPham : danhSachAnPham) {
             if((anPham instanceof TapChi && otherAnPham instanceof TapChi) || (anPham instanceof SachKhamKhao && otherAnPham instanceof SachKhamKhao)){
@@ -43,12 +49,24 @@ public class DanhMucAnPham {
         return false;
     }
 
+    boolean check2AnPhamCungLoaiVaCungTacGiaJava8(AnPham otherAnPham){
+        return danhSachAnPham.stream()
+                .anyMatch(anPham -> (anPham instanceof TapChi && otherAnPham instanceof TapChi || anPham instanceof SachKhamKhao && otherAnPham instanceof SachKhamKhao)
+                                            && anPham.getTacGia().equals(otherAnPham.getTacGia()));
+    }
+
     int tongTienAnPham(){
         int totalCost = 0;
         for (AnPham anPham : danhSachAnPham) {
             totalCost += anPham.getGia();
         }
         return totalCost;
+    }
+
+    int tongTienAnPhamJava8(){
+        return danhSachAnPham.stream()
+                .mapToInt(AnPham::getGia)
+                .sum();
     }
 
     AnPham anPhamCoNhieuTrangNhat(){
@@ -65,6 +83,12 @@ public class DanhMucAnPham {
         return result;
     }
 
+    Optional<AnPham> anPhamCoNhieuTrangNhatJava8(){
+        return danhSachAnPham.stream()
+                .filter(anPham -> anPham instanceof SachKhamKhao)
+                .max(Comparator.comparing(AnPham::getSoTrang)); // dùng max thì dùng filter, vì anymatch trả ra boolean
+    }
+
     boolean anPhamCoChuaTapChiCoTenChoTruoc(){
         for (AnPham anPham : danhSachAnPham){
             if(anPham instanceof TapChi){
@@ -74,6 +98,11 @@ public class DanhMucAnPham {
             }
         }
         return false;
+    }
+
+    boolean anPhamCoChuaTapChiCoTenChoTruocJava8(){
+        return danhSachAnPham.stream()
+                .anyMatch(anPham -> anPham instanceof TapChi && !anPham.getTieuDe().isBlank());
     }
 
     List<AnPham> danhSachTapChiXuatBan(int yearResult){
@@ -86,6 +115,12 @@ public class DanhMucAnPham {
             }
         }
         return danhSach;
+    }
+
+    List<AnPham> danhSachTapChiXuatBanJava8(int yearResult){
+        return danhSachAnPham.stream()
+                .filter(anPham -> anPham instanceof TapChi && LocalDate.now().getYear() - anPham.getNamXuatBan() >= yearResult)
+                .collect(Collectors.toList());
     }
 
     List<AnPham> sapXepAnPham(){
@@ -103,6 +138,11 @@ public class DanhMucAnPham {
             result.put(namXuatBan, result.getOrDefault(namXuatBan, 0) + 1);
         }
         return result;
+    }
+
+    Map<Integer, Long> thongKeSoLuongAnPhamJava8(){
+        return danhSachAnPham.stream()
+                .collect(Collectors.groupingBy(AnPham::getNamXuatBan, Collectors.counting()));
     }
 
     public static void main(String[] args) {
@@ -125,14 +165,25 @@ public class DanhMucAnPham {
         danhSachAnPham.add(tapChi);
         DanhMucAnPham danhMucAnPham = new DanhMucAnPham(danhSachAnPham);
         danhMucAnPham.checkAnPham();
-        System.out.println("--------------------------------");
-        System.out.println("Ấn phẩm có phải là tạp chí và thời gian xuất bản cách 10 năm? " + GREEN + danhMucAnPham.checkAnPhamVaThoiGianXuatBan(10) + RESET);
-        System.out.println("2 ấn phẩm có cùng loại và tác giả? " + GREEN + danhMucAnPham.check2AnPhamCungLoaiVaCungTacGia(sachKhamKhao) + RESET);
-        System.out.println("Tổng số tiền tất cả ấn phẩm: " + GREEN + danhMucAnPham.tongTienAnPham() + RESET);
-        System.out.println("Ấn phẩm với nhiều trang nhất: " + "\n" + GREEN + danhMucAnPham.anPhamCoNhieuTrangNhat() + RESET);
-        System.out.println("Ấn phẩm có chứa tạp chí và có tên cho trước: " + GREEN + danhMucAnPham.anPhamCoChuaTapChiCoTenChoTruoc() + RESET);
-        System.out.println("Danh sách tạp chí xuất bản từ 1 năm về trước: " + "\n" + GREEN + danhMucAnPham.danhSachTapChiXuatBan(1) + RESET);
-        System.out.println("Sắp xếp ẩn phẩm tăng dần theo tiêu đề và giảm dần theo năm xuất bản: " + "\n" + GREEN + danhMucAnPham.sapXepAnPham() + RESET);
-        System.out.println("Thống kê số lượng ấn phẩm theo năm xuất bản: " + GREEN + danhMucAnPham.thongKeSoLuongAnPham() + RESET);
+
+        List<Object> outputAnPham = List.of(
+            "--------------------------------",
+            "Ấn phẩm có phải là tạp chí và thời gian xuất bản cách 10 năm? " + GREEN + danhMucAnPham.checkAnPhamVaThoiGianXuatBan(10) + RESET,
+                                                                                       danhMucAnPham.checkAnPhamVaThoiGianXuatBanJava8(10) + "\n",
+            "2 ấn phẩm có cùng loại và tác giả? " + GREEN + danhMucAnPham.check2AnPhamCungLoaiVaCungTacGia(sachKhamKhao) + RESET,
+                                                            danhMucAnPham.check2AnPhamCungLoaiVaCungTacGiaJava8(sachKhamKhao) + "\n",
+            "Tổng số tiền tất cả ấn phẩm: " + GREEN + danhMucAnPham.tongTienAnPham() + RESET,
+                                                      danhMucAnPham.tongTienAnPhamJava8() + "\n",
+            "Ấn phẩm với nhiều trang nhất: " + "\n" + GREEN + danhMucAnPham.anPhamCoNhieuTrangNhat() + RESET,
+                                                              danhMucAnPham.anPhamCoNhieuTrangNhatJava8() + "\n",
+            "Ấn phẩm có chứa tạp chí và có tên cho trước: " + GREEN + danhMucAnPham.anPhamCoChuaTapChiCoTenChoTruoc() + RESET,
+                                                                      danhMucAnPham.anPhamCoChuaTapChiCoTenChoTruocJava8() + "\n",
+            "Danh sách tạp chí xuất bản từ 1 năm về trước: " + "\n" + GREEN + danhMucAnPham.danhSachTapChiXuatBan(1) + RESET,
+                                                                              danhMucAnPham.danhSachTapChiXuatBanJava8(1) + "\n",
+            "Sắp xếp ẩn phẩm tăng dần theo tiêu đề và giảm dần theo năm xuất bản: " + "\n" + GREEN + danhMucAnPham.sapXepAnPham() + RESET  + "\n",
+            "Thống kê số lượng ấn phẩm theo năm xuất bản: " + GREEN + danhMucAnPham.thongKeSoLuongAnPham() + RESET,
+                                                                      danhMucAnPham.thongKeSoLuongAnPhamJava8() + "\n"
+        );
+        outputAnPham.forEach(System.out::println);
     }
 }
