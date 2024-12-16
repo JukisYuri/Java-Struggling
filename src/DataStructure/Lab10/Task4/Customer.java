@@ -28,6 +28,6 @@ public class Customer {
                 "oid=" + cid +
                 ", name='" + name + '\'' +
                 ", tier=" + tier +
-                '}';
+                '}' + "\n";
     }
 }

@@ -20,7 +20,7 @@ public class OrderItem {
     public String toString() {
         return "OrderItem{" +
                 "quantity=" + quantity +
-                ", p=" + p +
+                ", p=" + p + "\n" +
                 '}';
     }
 }

@@ -15,7 +15,7 @@ public class OrderManager {
         return orders;
     }
 
-    Set<Product> getProducts(String supposeCategory) {
+    Set<Product> getProductsWithGivenCategory(String supposeCategory) {
         return orders.stream()
                 .flatMap(order -> order.getItems().stream()) // Truy cập từng OrderItem từ mỗi Order
                 .map(OrderItem::getP) // Lấy Product từ OrderItem
@@ -23,7 +23,7 @@ public class OrderManager {
                 .collect(Collectors.toSet()); // Thu thập kết quả vào Set
     }
 
-    Set<Product> getProducts(int tier, LocalDate from, LocalDate to) {
+    Set<Product> getProductsOrdered(int tier, LocalDate from, LocalDate to) {
         return orders.stream()
                 .filter(order -> order.getCustomer().getTier() == tier && order.getOrderDate().isAfter(from) && order.getOrderDate().isBefore(to))
                 .flatMap(order -> order.getItems().stream())
